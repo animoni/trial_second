@@ -2,22 +2,23 @@
 
 
 def caffeineBuzz(n)
-
-  # if n%3 == 0 && n%4 == 0 
-  #   return "Coffee"
-  # end
   
-  if n%3 == 0 && n%4 == 0 && n.odd?
+  base_odd = n%3 == 0 && n.odd?
+  base_even = n%3 == 0 && n.even?
+
+  if base_odd && n%4 == 0 
     return "Coffee"
-  elsif n%3 == 0 && n%4 == 0 && n.even?
+  elsif base_even && n%4 == 0 
     return "CoffeeScript"
   end
   
-  if n%3 == 0 && n.odd?
+  if base_odd
     return "Java"
-  elsif n%3 == 0 && n.even?
+  elsif base_even
     return "JavaScript"
   end
+  
+  return "mocha_missing!"
 end
 
 caffeineBuzz(1)#, "mocha_missing!")
