@@ -26,5 +26,14 @@ require "pry-byebug"
 # end
 
 def max_multiple(divisor, bound)
-  #your code here
+  
+  number = (0..bound).to_a.reverse
+  
+  number.select do |n|
+    if n%divisor == 0 
+      return n
+    end
+  end
+  
 end
+

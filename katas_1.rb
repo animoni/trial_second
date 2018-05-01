@@ -23,5 +23,12 @@ RSpec.describe do
         
     # end
     
-    
+    describe 'max_multiple' do 
+      it 'should return 6' do
+        expect(max_multiple(2,7)).to eq(6)
+      end
+      it 'should return 6' do
+        expect(max_multiple(3,10)).to eq(9)
+      end
+    end
 end
