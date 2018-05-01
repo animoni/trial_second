@@ -27,13 +27,10 @@ require "pry-byebug"
 
 def max_multiple(divisor, bound)
   
-  number = (0..bound).to_a.reverse
+  number =(0..bound).to_a.reverse
   
-  number.select do |n|
-    if n%divisor == 0 
-      return n
-    end
-  end
+  number.select {|n| return n if n%divisor == 0 }
+  
   
 end
 
